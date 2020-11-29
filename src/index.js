@@ -4,28 +4,17 @@ import { data as dataEng } from './data-eng';
 import {
 	render,
 	createNavbar,
+	createSlider,
+	initSlider,
 
 } from './templates';
-
-
-
-console.log('document.head :', document.head);
 
 function construct (data) {
 	const content = [];
 	content.push(createNavbar(data.navbar));
-	render(content, data);
+	content.push(createSlider(data.slider));
+	render(content.join(''), data);
 }
 
-// renderToggleButton(
-// 	{on:
-// 		{title: 'eng', data: dataEng},
-// 		off:{title: 'rus', data: dataRus}
-// 	},
-// 	'switch-lang',
-// 	(data) =>{
-// 		construct (data);
-// 	}
-// );
-
 construct (dataEng);
+initSlider();

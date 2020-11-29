@@ -4,7 +4,6 @@ export const data = {
 		sansSerif: 'Lato, sans-serif',
 	},
 	title: 'Constructor',
-	navbar: {
-
-	}
+	navbar: {},
+	slider: {}
 }
