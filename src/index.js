@@ -1,20 +1,6 @@
-// import './scss/main.scss';
-import { data as dataRus } from './data-rus';
-import { data as dataEng } from './data-eng';
-import {
-	render,
-	createNavbar,
-	createSlider,
-	initSlider,
+import { Builder } from "./core/Builder";
+import { data as dataRus } from "./data/data-rus";
+import { data as dataEng } from "./data/data-eng";
+import { Experiment } from "./components/experiment/Experiment";
 
-} from './templates';
-
-function construct (data) {
-	const content = [];
-	content.push(createNavbar(data.navbar));
-	content.push(createSlider(data.slider));
-	render(content.join(''), data);
-}
-
-construct (dataEng);
-initSlider();
+new Builder(dataEng, Experiment);

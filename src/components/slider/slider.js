@@ -1,6 +1,6 @@
-import './slider.scss';
-export function createSlider () {
-	return `
+import "./slider.scss";
+export function createSlider() {
+  return `
 		<section id="home" class="slider_area">
 			<div id="carouselThree" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -85,24 +85,32 @@ export function createSlider () {
 					</a>
 			</div>
 		</section>
-	`
+	`;
 }
 export function initSlider() {
-	const carouselItems = [...document.querySelectorAll('.carousel-item')];
-	const prevBtn = document.querySelector('.carousel-control-prev');
-	const nextBtn = document.querySelector('.carousel-control-next');
-	prevBtn.onclick = () => {
-		const active = carouselItems.find((item) => item.classList.contains('active'));
-		const nextIndex = carouselItems.indexOf(active) === 0
-			? carouselItems.length - 1 : carouselItems.indexOf(active) - 1;
-		active.classList.remove('active');
-		carouselItems[nextIndex].classList.add('active');
-	}
-	nextBtn.onclick = () => {
-		const active = carouselItems.find((item) => item.classList.contains('active'));
-		const nextIndex = carouselItems.indexOf(active) === carouselItems.length - 1
-			? 0 : carouselItems.indexOf(active) + 1;
-		active.classList.remove('active');
-		carouselItems[nextIndex].classList.add('active');
-	}
+  const carouselItems = [...document.querySelectorAll(".carousel-item")];
+  const prevBtn = document.querySelector(".carousel-control-prev");
+  const nextBtn = document.querySelector(".carousel-control-next");
+  prevBtn.onclick = () => {
+    const active = carouselItems.find((item) =>
+      item.classList.contains("active"),
+    );
+    const nextIndex =
+      carouselItems.indexOf(active) === 0
+        ? carouselItems.length - 1
+        : carouselItems.indexOf(active) - 1;
+    active.classList.remove("active");
+    carouselItems[nextIndex].classList.add("active");
+  };
+  nextBtn.onclick = () => {
+    const active = carouselItems.find((item) =>
+      item.classList.contains("active"),
+    );
+    const nextIndex =
+      carouselItems.indexOf(active) === carouselItems.length - 1
+        ? 0
+        : carouselItems.indexOf(active) + 1;
+    active.classList.remove("active");
+    carouselItems[nextIndex].classList.add("active");
+  };
 }
