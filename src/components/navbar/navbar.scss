@@ -1,2 +1,26 @@
-@import '@scss/variables';
-@import '@scss/_mixins.scss';
+@import "@scss/_variables";
+
+.navbar {
+  height: $navbarHeight;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+  .logo {
+    width: $navbarHeight;
+    height: $navbarHeight;
+    border: 1px solid tomato;
+    background-image: url("/src/images/logo-2.svg");
+    background-size: cover;
+    background-color: #eee;
+  }
+  .menu {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    .menu-item {
+      height: 100%;
+      display: flex;
+      cursor: pointer;
+    }
+  }
+}

@@ -6,4 +6,20 @@ export const data = {
   Experiment: {
     title: "Hello, constructor!",
   },
+  Navbar: {
+    menuItems: [
+      {
+        title: "About",
+        href: "#",
+      },
+      {
+        title: "Market",
+        href: "#",
+      },
+      {
+        title: "Contacts",
+        href: "#",
+      },
+    ],
+  },
 };

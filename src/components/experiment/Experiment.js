@@ -1,4 +1,5 @@
 import "./experiment.scss";
+
 export class Experiment {
   render(data) {
     return `
